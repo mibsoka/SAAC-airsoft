@@ -1,0 +1,1 @@
+function inscrire(nom){const t=document.getElementById('toast');t.textContent='Inscription demandée : '+nom;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000)}
