@@ -161,3 +161,7 @@
     padding-right:5px;
   }
 }
+
+.reset{margin-top:20px}.table:has(#rankingList:empty){min-height:70px}.table:has(#rankingList:empty)::after{content:"Aucun résultat pour le moment — les résultats des prochains tournois apparaîtront ici.";display:block;padding:24px;color:#68736b;font-size:11px}
+
+.db-status{margin-top:14px;border:1px solid #3c493f;padding:11px 14px;color:#9ba59d;font-size:9px;letter-spacing:1.5px;display:inline-block}.db-status.online{color:#a7ff3f;border-color:#54733f}.empty{padding:28px 0;color:#68736b;font-size:12px}

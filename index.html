@@ -27,11 +27,11 @@
 <section id="equipment" class="section partner"><div><p class="eyebrow">05 — ÉQUIPEMENT</p><h2>BESOIN DE<br><em>MATÉRIEL ?</em></h2><p>Le SAAC organise les activités. La fourniture et la location sont assurées par <strong>GRUPPE 6</strong>.</p></div>
 <div class="box"><span>PARTENAIRE ÉQUIPEMENT</span><strong>GRUPPE 6</strong><p>Réplique • protection • équipement selon disponibilité</p><button onclick="toast('Demande de location enregistrée')">DEMANDER UNE LOCATION</button></div></section>
 
-<section id="admin" class="section admin"><div class="head"><div><p class="eyebrow">06 — ADMINISTRATION</p><h2>SAAC<br><em>CONTROL.</em></h2></div><div class="lock">🔐 ESPACE RESPONSABLES</div></div>
+<section id="admin" class="section admin"><div class="head"><div><p class="eyebrow">06 — ADMINISTRATION</p><h2>SAAC<br><em>CONTROL.</em></h2></div><div class="lock">🔐 ESPACE RESPONSABLES</div><div id="dbStatus" class="db-status">● CONNEXION SUPABASE…</div></div>
 <div class="dashboard"><div class="stat"><small>ÉVÉNEMENTS</small><b id="statEvents">0</b></div><div class="stat"><small>INSCRITS</small><b id="statPlayers">0</b></div><div class="stat"><small>JOUEURS</small><b id="statRanking">0</b></div><div class="stat"><small>STATUT</small><b>ONLINE</b></div></div>
 <div class="adminGrid"><div><h3>AJOUTER UN ÉVÉNEMENT</h3><input id="eventName" placeholder="Nom de l'événement"><input id="eventTime" placeholder="Horaire — ex. 20:30"><input id="eventDesc" placeholder="Description"><button class="btn" onclick="addEvent()">PUBLIER</button></div>
 <div><h3>AJOUTER UN JOUEUR</h3><input id="playerName" placeholder="Nom du joueur"><input id="playerMatches" type="number" placeholder="Matchs"><input id="playerWins" type="number" placeholder="Victoires"><input id="playerLosses" type="number" placeholder="Défaites"><button class="btn" onclick="addPlayer()">AJOUTER AU CLASSEMENT</button></div></div>
 <p class="note">V2 prototype : les données sont stockées dans le navigateur. La prochaine étape pourra connecter une vraie base de données et des comptes.</p></section>
 
 <section class="cta"><p class="eyebrow">07 — REJOINDRE LE CLUB</p><h2>PRÊT À ENTRER<br><em>SUR LE TERRAIN ?</em></h2><a class="btn" href="#events">VOIR LES INSCRIPTIONS</a></section>
-<footer><strong>SAAC</strong><span>SAN ANDREAS AIRSOFT CLUB</span><span>PASSION • PARTAGE • RESPECT</span></footer><div id="toast"></div><script src="script.js"></script></body></html>
+<footer><strong>SAAC</strong><span>SAN ANDREAS AIRSOFT CLUB</span><span>PASSION • PARTAGE • RESPECT</span></footer><div id="toast"></div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="script.js"></script></body></html>
