@@ -98,7 +98,7 @@ async function loadRanking(){
     .select('player_name,matches_played,wins,losses,points')
     .order('points',{ascending:false});
   if(error || !data || !data.length){
-    list.innerHTML='';
+    list.innerHTML='<div class="empty">Aucun résultat pour le moment — le classement sera alimenté après les prochaines compétitions.</div>';
     document.getElementById('statRanking').textContent='0';
     return;
   }
@@ -114,15 +114,6 @@ async function loadNews(){
   await db.from('news').select('id,title,content,image_url,created_at').eq('published',true).order('created_at',{ascending:false});
 }
 
-function addEvent(){
-  toast('La création d’événements sera activée dans le panel admin sécurisé.');
-}
-function addPlayer(){
-  toast('Les résultats seront gérés depuis le panel admin sécurisé.');
-}
-function resetRanking(){
-  toast('La RAZ sera disponible uniquement pour un administrateur connecté.');
-}
 
 async function init(){
   await loadEvents();

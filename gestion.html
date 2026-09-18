@@ -1,0 +1,14 @@
+<!doctype html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAAC — Gestion</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="nav"><a class="brand" href="index.html"><b>SAAC</b><small>SAN ANDREAS AIRSOFT CLUB</small></a><span class="lock">🔐 ESPACE RESPONSABLES</span></header>
+<main class="section admin" style="padding-top:120px">
+<div class="head"><div><p class="eyebrow">ESPACE PRIVÉ</p><h2>SAAC<br><em>CONTROL.</em></h2></div><div id="dbStatus" class="db-status">● CONNEXION SUPABASE…</div></div>
+<div id="loginBox" class="adminGrid"><div><h3>CONNEXION</h3><input id="email" type="email" placeholder="Email responsable"><input id="password" type="password" placeholder="Mot de passe"><button class="btn" onclick="login()">SE CONNECTER</button><p class="note">L'accès est réservé aux comptes responsables créés dans Supabase Auth.</p></div></div>
+<div id="panel" style="display:none">
+<div class="dashboard"><div class="stat"><small>ÉVÉNEMENTS</small><b id="statEvents">0</b></div><div class="stat"><small>INSCRITS</small><b id="statPlayers">0</b></div><div class="stat"><small>JOUEURS</small><b id="statRanking">0</b></div><div class="stat"><small>STATUT</small><b>PRIVÉ</b></div></div>
+<div class="adminGrid"><div><h3>AJOUTER UN ÉVÉNEMENT</h3><input id="eventTitle" placeholder="Nom de l'événement"><input id="eventDate" type="date"><input id="eventTime" placeholder="Horaire — ex. 20:30"><input id="eventDesc" placeholder="Description"><input id="eventLocation" placeholder="Lieu"><input id="eventPlaces" type="number" placeholder="Nombre de places"><button class="btn" onclick="addEvent()">PUBLIER</button></div>
+<div><h3>GESTION DU CLASSEMENT</h3><input id="playerName" placeholder="Nom du joueur"><input id="playerMatches" type="number" placeholder="Matchs"><input id="playerWins" type="number" placeholder="Victoires"><input id="playerLosses" type="number" placeholder="Défaites"><input id="playerPoints" type="number" placeholder="Points"><button class="btn" onclick="addPlayer()">AJOUTER</button><button class="btn ghost" onclick="resetRanking()">RAZ DU CLASSEMENT</button></div></div>
+<div class="adminGrid"><div><h3>INSCRIPTIONS</h3><div id="registrationList" class="empty">Chargement…</div></div><div><h3>SESSION</h3><button class="btn ghost" onclick="logout()">SE DÉCONNECTER</button></div></div>
+</div></main><div id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="gestion.js"></script></body></html>
